@@ -1,0 +1,16 @@
+# --- Rust / Cargo ---
+/target
+Cargo.lock
+
+# --- Données locales (Persistence) ---
+# On ignore les fichiers de données pour que le correcteur reparte sur une base propre
+notes.json
+notes.db
+export_*.json
+
+# --- OS / IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.log

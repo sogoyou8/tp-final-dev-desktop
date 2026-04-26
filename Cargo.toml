@@ -1,0 +1,23 @@
+[package]
+name    = "projet-final-notes"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# ── UI ────────────────────────────────────────────────────────────────────────
+eframe   = "0.31"
+egui     = "0.31"
+
+# ── Persistance ───────────────────────────────────────────────────────────────
+serde      = { version = "1",    features = ["derive"] }  # macros Serialize/Deserialize
+serde_json = "1"
+rusqlite   = { version = "0.31", features = ["bundled"] } # SQLite embarqué (no system dep)
+dirs       = "5"                                           # chemin home portable
+
+# ── Réseau ────────────────────────────────────────────────────────────────────
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+tokio   = { version = "1",    features = ["full"] }
+
+# ── Utilitaires ───────────────────────────────────────────────────────────────
+chrono = { version = "0.4", features = ["serde"] }  # DateTime sérialisable
+uuid   = { version = "1",   features = ["v4", "serde"] }     # UUID v4 pseudo-aléatoire
